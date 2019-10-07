@@ -95,7 +95,10 @@ class Food(Resource):
 
 api.add_resource(Food, "/food/return")
 
-app.run(debug=True)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
 
 
 
