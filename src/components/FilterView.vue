@@ -4,7 +4,7 @@
     .container
         md-card
             md-card-header
-                md-card-header-text Select Filters:
+                md-card-header-text Select filters and press red check box to confirm your filter:
             md-card-content
                 FilterCard(v-for="filter in filters" @confirm="addToFilters")
             md-card-actions

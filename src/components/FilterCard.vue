@@ -17,7 +17,7 @@
                     label Amount (g)
                     md-input(v-model="amount" type="number")
             .confirm-button.md-size-10.md-layout-item
-                md-button(@click="generateAndConfirm").md-icon-button.md-raised
+                md-button(:style="{'background-color' : backgroundColor}" @click="generateAndConfirm").md-icon-button.md-raised
                     md-icon check
 
 
@@ -31,13 +31,17 @@
             return{
                 nutrientChoice: Number,
                 amount: Number,
-                buttonVal: ''
+                buttonVal: '',
+                confirmed: false,
+                backgroundColor: 'red'
             }
         },
 
         methods: {
             generateAndConfirm (){
-                this.$emit('confirm', this.filterArray)
+                this.confirmed = true;
+                this.backgroundColor = 'green';
+                this.$emit('confirm', this.filterArray);
             }
         },
 
@@ -56,5 +60,12 @@
 </script>
 
 <style scoped lang="stylus">
+
+    .green-button
+        background-color green
+
+    .red-button
+        background-color red
+
 
 </style>
