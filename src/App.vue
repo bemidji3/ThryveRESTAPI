@@ -1,18 +1,42 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+    .master-container
+        FilterView(@gotResponse="displayResponse")
+        ResponseView(v-if="!isEmpty" :response="filterResponse")
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import ResponseView from './components/ResponseView'
+import FilterView from './components/FilterView'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+    FilterView,
+    ResponseView
+  },
+    data() {
+      return {
+          filterResponse: {}
+      }
+    },
+
+    methods: {
+      displayResponse(val){
+          this.filterResponse = val;
+      },
+
+        isEmpty(){
+          for(let key in this.filterResponse){
+              if (this.filterResponse.hasOwnProperty(key)) {
+                  return false;
+              }
+          }
+
+            return true;
+
+        }
+    }
 }
 </script>
 <style lang="stylus">
