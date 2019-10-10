@@ -1,7 +1,7 @@
 <template lang="pug">
     .master-container
         FilterView(@gotResponse="displayResponse")
-        ResponseView(v-if="!isEmpty" :response="filterResponse")
+        ResponseView(:response="filterResponse" v-if="!isEmpty")
 </template>
 
 <script>
@@ -21,21 +21,27 @@ export default {
       }
     },
 
+    computed: {
+
+      isEmpty(){
+          for(var prop in this.filterResponse) {
+              if(this.filterResponse.hasOwnProperty(prop))
+                  return false;
+          }
+          return true;
+      }
+
+    },
+
     methods: {
       displayResponse(val){
+
+          console.log("response value: ")
+          console.log(val)
           this.filterResponse = val;
       },
 
-        isEmpty(){
-          for(let key in this.filterResponse){
-              if (this.filterResponse.hasOwnProperty(key)) {
-                  return false;
-              }
-          }
 
-            return true;
-
-        }
     }
 }
 </script>
