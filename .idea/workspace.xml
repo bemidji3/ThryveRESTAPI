@@ -1,60 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6fc892c-998e-4588-9cbb-001bdb03ef9d" name="Default Changelist" comment="First Changelist Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/ThryveInsideRESTAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ThryveInsideRESTAPI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Jinja2-2.10.1.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Jinja2-2.10.1.dist-info/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Jinja2-2.10.1.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Jinja2-2.10.1.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Jinja2-2.10.1.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Jinja2-2.10.1.dist-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Jinja2-2.10.1.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/_compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/_compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/bccache.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/bccache.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/debug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/runtime.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/runtime.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/sandbox.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/jinja2/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2019.2.dist-info/DESCRIPTION.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2019.2.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2019.2.dist-info/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2019.2.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2019.2.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2019.2.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2019.2.dist-info/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2019.2.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2019.2.dist-info/zip-safe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Detroit" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Detroit" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Edmonton" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Edmonton" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Indiana/Tell_City" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Indiana/Tell_City" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Kentucky/Louisville" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Kentucky/Louisville" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Louisville" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Louisville" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Vancouver" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Vancouver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Asia/Hong_Kong" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Asia/Hong_Kong" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Asia/Istanbul" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Asia/Istanbul" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Asia/Seoul" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Asia/Seoul" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Canada/Mountain" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Canada/Mountain" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Canada/Pacific" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Canada/Pacific" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Europe/Brussels" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Europe/Brussels" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Europe/Istanbul" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Europe/Istanbul" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Europe/Kaliningrad" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Europe/Kaliningrad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Europe/Vienna" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Europe/Vienna" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Hongkong" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Hongkong" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Fiji" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Fiji" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Norfolk" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Norfolk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/ROK" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/ROK" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Turkey" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Turkey" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/US/Michigan" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/US/Michigan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/leapseconds" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/leapseconds" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/tzdata.zi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/tzdata.zi" afterDir="false" />
-    </list>
+    <list default="true" id="b6fc892c-998e-4588-9cbb-001bdb03ef9d" name="Default Changelist" comment="First Changelist Commit" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
