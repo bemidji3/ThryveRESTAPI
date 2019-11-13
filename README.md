@@ -1,8 +1,8 @@
 # ThryveInsideRESTAPI
 
+Sean Gay, Jack Morgan, James Philhower, Pedro Lopes
 TEST INSTRUCTIONS:
-    Execute the script test_food_db.py to see the corresponding results. The class is constructed in main.py and NOT an
-    _database.py due to the structure of our server and the reliance of our project on the front end of the server. 
+    Execute the script test_food_db.py to see the corresponding results. The library is constructed in _food_db.py. 
 
 SERVER INSTRUCTIONS:   
 To run the server, make sure to have (at least) Python3 Installed
