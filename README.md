@@ -1,5 +1,10 @@
 # ThryveInsideRESTAPI
 
+TEST INSTRUCTIONS:
+    Execute the script test_food_db.py to see the corresponding results. The class is constructed in main.py and NOT an
+    _database.py due to the structure of our server and the reliance of our project on the front end of the server. 
+
+SERVER INSTRUCTIONS:   
 To run the server, make sure to have (at least) Python3 Installed
 Python3 download link: https://www.python.org/downloads/release/python-374/
 
@@ -15,4 +20,5 @@ After this is done, run python3 main.py, and the server will start up.  If, for
 some reason these programs do not work, open the project in PyCharm,
 configure your python interpreter (if you have not already done so), and run the
 program by clicking the green arrow button in the top right of the screen.374
+
 

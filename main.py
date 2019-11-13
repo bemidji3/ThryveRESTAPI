@@ -1,14 +1,14 @@
-from flask import Flask, jsonify
-from flask_restful import Api, Resource, reqparse
+#from flask import Flask, jsonify
+#from flask_restful import Api, Resource, reqparse
 import json
 import collections
 from pprint import pprint
 
 
-app = Flask(__name__)
-api = Api(app)
+#app = Flask(__name__)
+#api = Api(app)
 
-class Food(Resource):
+class Food():
 
     def __init__(self):
         self.nutrient_ids = {
@@ -34,6 +34,7 @@ class Food(Resource):
                 if food_nutrient["nutrient_id"] == match_nutrient and food_nutrient["value"] != '--':
                     if float(food_nutrient["value"]) == float(amount):
                         self.post_response['equal'][food_nutrient["nutrient"] + ' ' + str(amount) + 'g'].append(food["name"])
+        return self.post_response
 
 
 
@@ -44,7 +45,7 @@ class Food(Resource):
                 if food_nutrient["nutrient_id"] == match_nutrient and food_nutrient["value"] != '--':
                     if float(food_nutrient["value"]) < amount:
                         self.post_response['under'][food_nutrient["nutrient"] + ' ' + str(amount) + 'g'].append(food["name"])
-
+        return self.post_response
 
     def check_over(self, match_nutrient, amount):
         self.post_response['over'][self.nutrient_ids[match_nutrient] + ' ' + str(amount) + 'g'] = []
@@ -53,7 +54,7 @@ class Food(Resource):
                 if food_nutrient["nutrient_id"] == match_nutrient and food_nutrient["value"] != '--':
                     if float(food_nutrient["value"]) > amount:
                         self.post_response['over'][food_nutrient["nutrient"] + ' ' + str(amount) + 'g'].append(food["name"])
-
+        return self.post_response
 
     def filter_check(self, nutrient, flag, amount):
         if flag == 'under':
@@ -78,10 +79,6 @@ class Food(Resource):
         under = args['under']
         equals = args['equal']
 
-
-
-
-
         for nutrient in over:
             print('checking over!')
             self.filter_check(nutrient,'over',over[nutrient])
@@ -93,7 +90,7 @@ class Food(Resource):
         return self.post_response
 
 
-api.add_resource(Food, "/food/return")
+#api.add_resource(Food, "/food/return")
 
 
 if __name__ == '__main__':
