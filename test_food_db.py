@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from main import Food
+from _food_db import Food
 import unittest
 
 class TestFood(unittest.TestCase):
