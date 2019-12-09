@@ -1,14 +1,16 @@
-#from flask import Flask, jsonify
-#from flask_restful import Api, Resource, reqparse
+from flask import Flask, jsonify
+from flask_restful import Api, Resource, reqparse
+from flask_cors import CORS, cross_origin
 import json
 import collections
 from pprint import pprint
 
 
-#app = Flask(__name__)
-#api = Api(app)
+app = Flask(__name__)
+api = Api(app)
 
-class Food():
+
+class Food(Resource):
 
     def __init__(self):
         self.nutrient_ids = {
@@ -18,14 +20,11 @@ class Food():
             '269': "Sugars, total"
         }
 
-
         with open('food_data.json') as json_file:
             self.data = json.load(json_file)
 
         self.foods = self.data["report"]["foods"]
         self.post_response = collections.defaultdict(dict)
-        #pprint(self.foods)
-
 
     def check_equals(self, match_nutrient, amount):
         self.post_response['equal'][self.nutrient_ids[match_nutrient] + ' ' + str(amount) + 'g'] = []
@@ -34,27 +33,22 @@ class Food():
                 if food_nutrient["nutrient_id"] == match_nutrient and food_nutrient["value"] != '--':
                     if float(food_nutrient["value"]) == float(amount):
                         self.post_response['equal'][food_nutrient["nutrient"] + ' ' + str(amount) + 'g'].append(food["name"])
-        return self.post_response
-
-
 
     def check_under(self, match_nutrient, amount):
         self.post_response['under'][self.nutrient_ids[match_nutrient] + ' ' + str(amount) + 'g'] = []
         for food in self.foods:
             for food_nutrient in food['nutrients']:
                 if food_nutrient["nutrient_id"] == match_nutrient and food_nutrient["value"] != '--':
-                    if float(food_nutrient["value"]) < amount:
+                    if float(food_nutrient["value"]) < float(amount):
                         self.post_response['under'][food_nutrient["nutrient"] + ' ' + str(amount) + 'g'].append(food["name"])
-        return self.post_response
 
     def check_over(self, match_nutrient, amount):
         self.post_response['over'][self.nutrient_ids[match_nutrient] + ' ' + str(amount) + 'g'] = []
         for food in self.foods:
             for food_nutrient in food['nutrients']:
                 if food_nutrient["nutrient_id"] == match_nutrient and food_nutrient["value"] != '--':
-                    if float(food_nutrient["value"]) > amount:
+                    if float(food_nutrient["value"]) > float(amount):
                         self.post_response['over'][food_nutrient["nutrient"] + ' ' + str(amount) + 'g'].append(food["name"])
-        return self.post_response
 
     def filter_check(self, nutrient, flag, amount):
         if flag == 'under':
@@ -87,10 +81,22 @@ class Food():
         for nutrient in equals:
             self.filter_check(nutrient, 'equal', equals[nutrient])
 
+
+        print("post response: ")
+        pprint(self.post_response)
+
         return self.post_response
 
 
-#api.add_resource(Food, "/food/return")
+api.add_resource(Food, "/food/return")
+
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
+    return response
+
 
 
 if __name__ == '__main__':
