@@ -1,4 +1,4 @@
-# ThryveInsideRESTAPI
+# ThryveRESTAPI
 
 Sean Gay, Jack Morgan, James Philhower, Pedro Lopes
 TEST INSTRUCTIONS:
