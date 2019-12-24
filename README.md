@@ -1,11 +1,6 @@
 # ThryveRESTAPI
 
-Sean Gay, Jack Morgan, James Philhower, Pedro Lopes
-TEST INSTRUCTIONS:
-    Execute the script test_food_db.py to see the corresponding results. The library is constructed in _food_db.py. 
-    The databse is made from the json file food_data.json which contains information pertaining to many foods and 
-    their nutrient makeups. We are using this file to report to the users what foods correspond to certain nutrient 
-    makeups based upon input. 
+Jack Morgan
 
 SERVER INSTRUCTIONS:   
 To run the server, make sure to have (at least) Python3 Installed
