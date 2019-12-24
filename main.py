@@ -4,6 +4,7 @@ from flask_cors import CORS, cross_origin
 import json
 import collections
 from pprint import pprint
+import operator
 
 
 app = Flask(__name__)
@@ -20,43 +21,25 @@ class Food(Resource):
             '269': "Sugars, total"
         }
 
+        self.ops = {
+            '>' : operator.gt,
+            '=' : operator.eq,
+            '<' : operator.lt
+        }
+
         with open('food_data.json') as json_file:
             self.data = json.load(json_file)
 
         self.foods = self.data["report"]["foods"]
         self.post_response = collections.defaultdict(dict)
 
-    def check_equals(self, match_nutrient, amount):
-        self.post_response['equal'][self.nutrient_ids[match_nutrient] + ' ' + str(amount) + 'g'] = []
+    def check(self, match_nutrient, amount, flag, op):
+        self.post_response[flag][self.nutrient_ids[match_nutrient] + ' ' + str(amount) + 'g'] = []
         for food in self.foods:
             for food_nutrient in food['nutrients']:
                 if food_nutrient["nutrient_id"] == match_nutrient and food_nutrient["value"] != '--':
-                    if float(food_nutrient["value"]) == float(amount):
-                        self.post_response['equal'][food_nutrient["nutrient"] + ' ' + str(amount) + 'g'].append(food["name"])
-
-    def check_under(self, match_nutrient, amount):
-        self.post_response['under'][self.nutrient_ids[match_nutrient] + ' ' + str(amount) + 'g'] = []
-        for food in self.foods:
-            for food_nutrient in food['nutrients']:
-                if food_nutrient["nutrient_id"] == match_nutrient and food_nutrient["value"] != '--':
-                    if float(food_nutrient["value"]) < float(amount):
-                        self.post_response['under'][food_nutrient["nutrient"] + ' ' + str(amount) + 'g'].append(food["name"])
-
-    def check_over(self, match_nutrient, amount):
-        self.post_response['over'][self.nutrient_ids[match_nutrient] + ' ' + str(amount) + 'g'] = []
-        for food in self.foods:
-            for food_nutrient in food['nutrients']:
-                if food_nutrient["nutrient_id"] == match_nutrient and food_nutrient["value"] != '--':
-                    if float(food_nutrient["value"]) > float(amount):
-                        self.post_response['over'][food_nutrient["nutrient"] + ' ' + str(amount) + 'g'].append(food["name"])
-
-    def filter_check(self, nutrient, flag, amount):
-        if flag == 'under':
-            self.check_under(nutrient, amount)
-        elif flag == 'equal':
-            self.check_equals(nutrient, amount)
-        elif flag == 'over':
-            self.check_over(nutrient, amount)
+                    if self.ops[op](float(food_nutrient["value"]),float(amount)):
+                        self.post_response[flag][food_nutrient["nutrient"] + ' ' + str(amount) + 'g'].append(food["name"])
 
     def post(self):
 
@@ -74,21 +57,17 @@ class Food(Resource):
         equals = args['equal']
 
         for nutrient in over:
-            print('checking over!')
-            self.filter_check(nutrient,'over',over[nutrient])
+            self.check(nutrient,over[nutrient], 'over', '>')
         for nutrient in under:
-            self.filter_check(nutrient, 'under', under[nutrient])
+            self.check(nutrient, under[nutrient], 'under', '<')
         for nutrient in equals:
-            self.filter_check(nutrient, 'equal', equals[nutrient])
-
-
-        print("post response: ")
-        pprint(self.post_response)
+            self.check(nutrient, equals[nutrient], 'equal', '=')
 
         return self.post_response
 
 
 api.add_resource(Food, "/food/return")
+
 
 @app.after_request
 def after_request(response):
